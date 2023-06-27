@@ -7,25 +7,25 @@
 </head>
 <body>
     <form action="process.php" method="POST">
-        <label for="name">Họ và tên:</label>
+        <label for="name"><b>Họ và tên:</b></label>
         <br>
-        <input type="text" id="name" size="50" name="name" required>
-        <br>
-        <br>
-
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" size="50" name="email" required>
+        <input type="text" size="50" name="name" required>
         <br>
         <br>
 
-        <label for="phone">Số điện thoại:</label>
+        <label for="email"><b>Email:</b></label>
         <br>
-        <input type="text" id="phone" size="50" name="phone" required>
+        <input type="email" size="50" name="email" required>
         <br>
         <br>
 
-        <label for="gender">Giới tính:</label>
+        <label for="phone"><b>Số điện thoại:</b></label>
+        <br>
+        <input type="number" size="50" name="phone" required>
+        <br>
+        <br>
+
+        <label for="gender"><b>Giới tính:</b></label>
         <br>
         <input type="radio" name="gender" value="male"> Nam
         <input type="radio" name="gender" value="female"> Nữ
