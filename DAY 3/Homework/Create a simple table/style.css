@@ -1,0 +1,23 @@
+form {
+    font-family: 'Times New Roman', Times, serif
+}
+
+#hobby-table tr td {
+    color: orange;
+}
+
+#main-table tr th h2 {
+    color: white;
+    background-color: orange;
+    margin: 0 0;
+}
+
+#blue-name {
+    color:blue;
+    text-align: right;
+}
+
+#main-table {
+    border: 8px solid rgb(0, 238, 255);
+    margin: 8px;
+}

@@ -1,0 +1,23 @@
+.blue-name {
+    text-align: right;
+    color: blue;
+    margin: 0 0;
+
+}
+
+.main-table tr th h2 {
+    color: white;
+    background-color: orangered;
+    margin: 0 0;
+}
+
+.hobby-table tr td {
+    color: orange;
+}
+
+.main-table {
+    border: 8px solid aqua;
+}
+
+
+

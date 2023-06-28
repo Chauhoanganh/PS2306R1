@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form action="access.php" method="POST">
+        <table id="main-table">
+            <tr>
+                <th colspan="2"><h2>SỞ THÍCH CỦA BẠN</h2></th>
+            </tr>
+
+            <tr>
+                <td id="blue-name">Họ và tên</td>
+                <td>
+                    <input type="text" name="name" id="name"> 
+                </td>
+            </tr>
+
+            <tr>
+                <td id="blue-name">Email</td>
+                <td>
+                    <input type="email" name="email" id="email"> 
+                </td>
+            </tr>
+
+            <tr>
+                <td id="blue-name">Sở thích</td>
+                <td>
+                    <table id="hobby-table">
+                        <tr>
+                            <td><input type="checkbox" name="hobby" id="hobby">Thể thao</td>
+                            <td><input type="checkbox" name="hobby" id="hobby">Âm nhạc</td>
+                            <td><input type="checkbox" name="hobby" id="hobby">Đọc sách</td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="hobby" id="hobby">Lướt web</td>
+                            <td><input type="checkbox" name="hobby" id="hobby">Chơi game</td>
+                            <td><input type="checkbox" name="hobby" id="hobby">Điện ảnh</td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" name="hobby" id="hobby">Du lịch</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Gửi thông tin">
+                    <input type="reset" value="Nhập lại"></td>
+            </tr>
+
+        </table>
+
+
+
+    </form>
+</body>
+</html>

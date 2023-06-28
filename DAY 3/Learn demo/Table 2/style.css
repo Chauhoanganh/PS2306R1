@@ -11,3 +11,8 @@ td, th {
 tr:nth-child() {
     background-color: #dddddd;
 }
+
+#blue-name {
+    text-align: right;
+    color: blue;
+}
