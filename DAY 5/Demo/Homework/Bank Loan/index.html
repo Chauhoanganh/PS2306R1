@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money</title>
+</head>
+
+<body>
+    <script>
+        let money = parseFloat(prompt('Insert money: ($ million)'));
+        let interestRate = parseFloat(prompt('Insert the interest rate: (%)'));
+        let years = parseFloat(prompt('Insert the number of years:'));
+
+        let totalMoney = money + years*money*(interestRate / 100);
+
+        document.write('Your total money after ' + years + ' years is: ' + totalMoney + '$ million');
+
+    </script>
+</body>
+
+</html>

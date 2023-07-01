@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    
+    <script>
+        let day=prompt('Insert day');
+        let month=prompt('Insert month');
+        let year=prompt('Insert year');
+
+        if (day<10){
+            day='0'+day;
+        }
+
+        if (month<10){
+            month='0'+month;
+        }
+
+        let result=day + '-' + month + '-' + year;
+        
+        document.write(result)
+    </script>
+
+</body>
+</html>
