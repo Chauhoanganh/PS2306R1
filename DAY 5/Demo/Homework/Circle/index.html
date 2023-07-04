@@ -7,17 +7,14 @@
 </head>
 <body>
     <script>
-        // let R=prompt('Insert radius')
-        // const PI = 3.14159
-        // let C=PI*2*R
-
-        // document.write('The circumference of the circle is:'+ C );
-
-        let R=prompt('Insert radius')
+        let R=parseFloat(prompt('Insert radius'))
         const PI = 3.14159
+        let C=PI*2*R
         let a=PI*R*R
 
-        document.write('The area of the circle is:'+ a );
+       document.write('The circumference of the circle is: '+ C );
+       document.write('<br>')
+       document.write('The area of the circle is: '+ a );
     </script>
 </body>
 </html>
