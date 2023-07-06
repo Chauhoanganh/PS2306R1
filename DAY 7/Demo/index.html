@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <p id="demo-text"> This is a demo text</p>
+    <p>
+        <p class="text-center">
+            This is a text-centered paragraph.
+        </p>
+    </p>
+
+    <p class="text-center">
+        This is a text-centered paragraph 2
+    </p>
+    <p>
+        This is a text-centered paragraph 3
+    </p>
+    <script>
+        let demoText = document.getElementById("demo-text")
+        // demoText.innerText="<h1>Hello</.h1>"
+        // console.log(demoText.innerHTML)
+        demoText.style.color="red"
+
+        let pTag=document.getElementsByTagName("p")
+        console.log(pTag);
+
+        let textCenterClass=document.getElementsByClassName("text-center")
+
+
+    </script>
+</body>
+</html>

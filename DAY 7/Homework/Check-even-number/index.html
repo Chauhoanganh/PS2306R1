@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Even Number</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <input type="number" name="inputNumber" id="inputNumber">
+    <button onclick="checkNumber()">Kiểm tra</button>
+
+    <script>
+
+        function checkNumber() {
+            let inputNumber=document.getElementById("inputNumber").value 
+
+            if(inputNumber%2==0){
+                alert(inputNumber + " là số chẵn")
+            }
+            else{
+                alert(inputNumber + " không phải là số chẵn")
+            }
+        }
+
+    </script>
+</body>
+</html>
