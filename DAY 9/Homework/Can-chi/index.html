@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can Chi</title>
+</head>
+<body>
+    <p id="theLunarYear"></p>
+    <script>
+        let theYear = parseInt(prompt('Please enter the year: '))
+        let theCan = theYear % 10
+        let theChi = theYear % 12
+        let canYear, chiYear;
+
+        function getTheCan() {
+            switch (theCan) {
+                case 0:
+                    canYear = "Canh"
+                    break;
+                case 1:
+                    canYear = "Tân"
+                    break;
+                case 2:
+                    canYear = "Nhâm"
+                    break;
+                case 3:
+                    canYear = "Quý"
+                    break;
+                case 4:
+                    canYear = "Giáp"
+                    break;
+                case 5:
+                    canYear = "Ất"
+                    break;
+                case 6:
+                    canYear = "Bính"
+                    break;
+                case 7:
+                    canYear = "Đinh"
+                    break;
+                case 8:
+                    canYear = "Mậu"
+                    break;
+                case 9:
+                    canYear = "Kỷ"
+                    break;
+                     
+                default:
+                
+                    break;
+            }
+        }
+
+        function getTheChi() {
+            switch (theChi) {
+                case 0:
+                    chiYear = "Thân"
+                    break;
+                case 1:
+                    chiYear = "Dậu"
+                    break;
+                case 2:
+                    chiYear = "Tuất"
+                    break;
+                case 3:
+                    chiYear = "Hợi"
+                    break;
+                case 4:
+                    chiYear = "Tý"
+                    break;
+                case 5:
+                    chiYear = "Sửu"
+                    break;
+                case 6:
+                    chiYear = "Dần"
+                    break;
+                case 7:
+                    chiYear = "Mẹo"
+                    break;
+                case 8:
+                    chiYear = "Thìn"
+                    break;
+                case 9:
+                    chiYear = "Tỵ"
+                    break;
+                case 10:
+                    chiYear = "Ngọ"
+                    break;
+                case 11:
+                    chiYear = "Mùi"
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        let result=document.getElementById("theLunarYear")
+
+        getTheCan()
+        getTheChi()
+
+        result.innerText=canYear+' '+chiYear
+        
+
+    </script>
+</body>
+</html>

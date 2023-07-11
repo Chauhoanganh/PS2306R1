@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frui pricing</title>
+</head>
+<body>
+    <h1>Gia hoa qua</h1>
+    <input type="text" onchange="getFruit(this)" name="fruitname" id="fruitname">
+    <button id="checkBtn">Xem gia</button>
+    <p id="resultPrice"></p>
+    <script>
+        let price, fruit;
+        let checkBtn=document.getElementById("checkBtn")
+        function getFruit(obj){
+                fruit=obj.value
+        }
+        function getPrice() {
+            switch(fruit) {
+                case "guava":
+                    price="20000 VNĐ/kg"
+                    break;
+                case "watermelon":
+                    price="20000 VNĐ/kg"
+                    break;
+                default:
+                    alert('The price is not updated')
+                    break;
+            }
+            let result=document.getElementById("resultPrice")
+            result.innerHTML=price 
+        }
+
+        checkBtn.addEventListener("click", getPrice)
+    </script>
+
+</body>
+</html>

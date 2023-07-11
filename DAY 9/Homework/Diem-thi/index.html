@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diem thi Dai hoc</title>
+</head>
+<body>
+    <h1>Tính điểm thi Đại học</h1>
+    <p>Môn Toán</p>
+    <input type="number" onchange="getmathScore(this)" name="mathScore" id="mathScore">
+    <br>
+    <p>Môn Văn</p>
+    <input type="number" onchange="getlitScore(this)" name=litScore" id="litScore">
+    <br>
+    <p>Môn Anh</p>
+    <input type="number" onchange="getengScore(this)" name="engScore" id="engScore">
+    <br>
+    <p>Khu vực</p>
+    <select name="diemKhuVuc" id="diemKhuVuc">
+        <option value="kv1">KV1</option>
+        <option value="kv2nt">KV2-NT</option>
+        <option value="kv2">KV2</option>
+        <option value="kv3">KV3</option>
+      </select>
+    <button id="checkBtn">Tính điểm</button>
+    <h2 id="result"></h2>
+    
+    <script>
+        let mathScore, litScore, engScore, diemCong;
+        let diemKhuVuc = document.getElementById("diemKhuVuc").value
+        let checkBtn = document.getElementById("checkBtn")
+        function getmathScore(obj){
+            mathScore = parseFloat(obj.value)
+        }
+        function getlitScore(obj){
+            litScore = parseFloat(obj.value) 
+        }
+        function getengScore(obj){
+            engScore = parseFloat(obj.value)
+        }
+        function calculateScore() {
+            switch (diemKhuVuc) {
+                case "kv1":
+                    diemCong=0.75
+                    break;
+                case "kv2nt":
+                    diemCong=0.5
+                    break;
+                case "kv2":
+                    diemCong=0.25
+                    break;
+                default:
+                    diemCong=0
+                    break;
+            }
+            let result=mathScore+litScore+engScore+diemCong 
+            let rs=document.getElementById("result")
+            rs.innerText='Tổng điểm ĐH khối D của bạn là: ' + result
+        }
+        checkBtn.addEventListener("click", calculateScore)
+
+
+
+    </script>
+
+</body>
+</html>

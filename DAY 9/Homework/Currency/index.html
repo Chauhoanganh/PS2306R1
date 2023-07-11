@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+    <style>
+        table, th, td {
+          border:none;
+        }
+        #result {
+            color: blue
+        }
+        </style>
+</head>
+<body>
+    <table style="width:60%">
+        <tr>
+          <td>Amount</td>
+          <td>From Currency</td>
+          <td>To Currency</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td> <input type="number" onchange="getAmount(this)" name="amount" id="amount"> </td>
+          <td> <select name="fromCurrency" id="fromCurrency" widtd="70">
+            <option value="vnd">VND</option>
+          </select>
+          </td>
+          <td>
+            <select name="toCurrency" id="toCurrency" widtd="70">
+                <option value="usd">USD</option>
+                <option value="cny">CNY</option>
+                <option value="krw">KRW</option>
+          </td>
+          <td>
+            <button id="checkBtn">Convert</button>
+          </td>
+
+        </tr>
+
+      </table>
+      <p id="result"></p>
+    
+    <script>
+        let amount;
+        let fromCurrency;
+        let rate;
+        let checkBtn=document.getElementById("checkBtn")
+
+        let toCurrency=document.getElementById("toCurrency").value
+
+        function getAmount(obj) {
+            amount=parseFloat(obj.value)
+        }
+        
+        function convertCurrency() {
+    
+
+            switch (toCurrency) {
+                case "usd":
+                    rate=0.000042
+                    break;
+                
+                case "cny":
+                    rate=0.00031
+                    break;
+                
+                case "krw":
+                    rate=0.055
+                    break;
+
+                default:
+                    rate=1
+                    break;
+            }
+            let result=amount*rate 
+            let finalResult=document.getElementById("result")
+            finalResult.innerText='Result: ' + result 
+        }
+
+        checkBtn.addEventListener("click", convertCurrency)
+    </script>
+    
+
+</body>
+</html>

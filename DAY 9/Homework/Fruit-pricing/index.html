@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit pricing</title>
+</head>
+
+<body>
+    <h1>Fruit price table</h1>
+    <input type="text" onchange="getFruitName(this)" name="fruitname" id="fruitname">
+    <button id="checkBtn">Check the price</button>
+    <h2 id="priceOfTheFruit"></h2>
+    <script>
+        let fruit;
+        let price;
+        let checkBtn=document.getElementById("checkBtn")
+        function getFruitName(obj) {
+            fruit=obj.value
+        }
+
+        function findPrice() {
+            switch (fruit) {
+                case "guava":
+                    price = "20000 VNĐ/kg"
+                    break;
+                case "watermelon":
+                    price = "20000 VNĐ/kg"
+                    break;
+                case "apple":
+                    price = "30000 VNĐ/kg"
+                    break;
+                case "mango":
+                    price = "30000 VNĐ/kg"
+                    break;
+                case "orange":
+                    price = "40000 VNĐ/kg"
+                    break;
+                case "rambutan":
+                    price = "40000 VNĐ/kg"
+                    break;
+                case "mangosteen":
+                    price = "50000 VNĐ/kg"
+                    break;
+                default:
+                    alert('The price is not updated')
+                    break;
+            }
+            let result=document.getElementById("priceOfTheFruit")
+                result.innerText=price
+            
+        }
+        
+        checkBtn.addEventListener("click", findPrice)       
+
+    </script>
+</body>
+
+</html>
