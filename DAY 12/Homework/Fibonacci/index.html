@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <input type="number" name="fiboQuantity" id="fiboQuantity" onchange="getfiboQuantiy(this)" placeholder="How many Fibonacci numbers do you want?">
+    <button onclick="createFiboBtn()">Generate!</button>
+    <p id="result"></p>
+    <script>
+        let quantity, fiboString, firstNumber, secondNumber, thirdNumber;
+        let sum=0;
+        let result=document.getElementById("result");
+        function getfiboQuantiy(obj) {
+            quantity = parseInt(obj.value)
+        }
+
+        function createFiboBtn() {
+            if (quantity == 1) {
+                fiboString=1;
+            }
+            else if (quantity == 2) {
+                fiboString="1, 1";
+            } else {
+                fiboString="1, 1";
+                console.log(fiboString);
+                firstNumber=1;
+                secondNumber=1;
+                for (let i=3; i<=quantity; i++) {
+                    thirdNumber=firstNumber+secondNumber;
+
+                    firstNumber=secondNumber;
+                    secondNumber=thirdNumber;
+                    fiboString = fiboString +', ' +thirdNumber;
+                }
+                
+            }
+            result.innerHTML=fiboString
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBN-10</title>
+</head>
+
+<body>
+    <p> Please enter 9 digits </p>
+    <input type="number" name="d1" id="d1" placeholder="Please enter the 1st digit"
+        onchange="getDigit(this, 'd1')"><br><br>
+    <input type="number" name="d2" id="d2" placeholder="Please enter the 2nd digit"
+        onchange="getDigit(this, 'd2')"><br><br>
+    <input type="number" name="d3" id="d3" placeholder="Please enter the 3rd digit"
+        onchange="getDigit(this, 'd3')"><br><br>
+    <input type="number" name="d4" id="d4" placeholder="Please enter the 4th digit"
+        onchange="getDigit(this, 'd4')"><br><br>
+    <input type="number" name="d5" id="d5" placeholder="Please enter the 5th digit"
+        onchange="getDigit(this, 'd5')"><br><br>
+    <input type="number" name="d6" id="d6" placeholder="Please enter the 6th digit"
+        onchange="getDigit(this, 'd6')"><br><br>
+    <input type="number" name="d7" id="d7" placeholder="Please enter the 7th digit"
+        onchange="getDigit(this, 'd7')"><br><br>
+    <input type="number" name="d8" id="d8" placeholder="Please enter the 8th digit"
+        onchange="getDigit(this, 'd8')"><br><br>
+    <input type="number" name="d9" id="d9" placeholder="Please enter the 9th digit"
+        onchange="getDigit(this, 'd9')"><br><br>
+    <button onclick="checkBtn()">Check!</button>
+    <p id="result">The ISBN-10 number is: </p>
+    <script>
+        let d1, d2, d3, d4, d5, d6, d7, d8, d9, d10;
+        let temp;
+        let result = document.getElementById("result");
+        
+        function getDigit(obj, digit) {
+           let input=obj.value;
+            switch (digit) {
+                case "d1":
+                    d1 = input;
+                    break;
+                case "d2":
+                    d2 = input;
+                    break;
+                case "d3":
+                    d3 = input;
+                    break;
+                case "d4":
+                    d4 = input;
+                    break;
+                case "d5":
+                    d5 = input;
+                    break;
+                case "d6":
+                    d6 = input;
+                    break;
+                case "d7":
+                    d7 = input;
+                case "d8":
+                    d8 = input;
+                    break;
+                case "d9":
+                    d9 = input;
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+        function cal() {
+            
+            d10 = (d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11
+            if (d10 == 10) {
+                d10="X"
+            }
+            else {d10=Number(d10)}
+        }
+
+        function checkBtn() {
+            cal()
+            isbn=d1+d2+d3+d4+d5+d6+d7+d8+d9+d10
+            result.innerText='The ISBN-10 number is:' + isbn
+        }
+    </script>
+
+
+</body>
+
+</html>

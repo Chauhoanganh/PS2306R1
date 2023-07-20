@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+</head>
+<body>
+    <button onclick="startGame()">Play!</button>
+    <script>
+        function startGame() {
+            let maxNumber = parseInt( prompt("Please enter the max number: "));
+            let randomNumber = Math.floor(Math.random() * maxNumber);
+            console.log(randomNumber);
+            let guessNumber;
+            let count=0;
+            do {
+                guessNumber = parseInt (prompt(`Please enter a random number from 0 to ${maxNumber}`))
+                if (guessNumber == randomNumber) {
+                    alert ("You guessed it right!")
+                    break;
+                }else {
+                    count++;
+            }} while (guessNumber != randomNumber && count<3)
+            alert ("You lose!");
+    }
+    </script>
+</body>
+</html>

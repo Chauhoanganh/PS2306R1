@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="multi-table">
+      
+    </table>
+    <script>
+        let table = document.getElementById("multi-table")
+        let tableCreate = '';
+        let rs = 1;
+       
+        for (let col = 1; col <= 10; col++) {
+            tableCreate += '<tr>'
+            console.log(tableCreate);
+            for (let bcc = 2; bcc <= 9; bcc++) {
+                rs = bcc * col;
+                tableCreate += '<td>' + bcc + " x " + col + " = " + rs + '</td>'
+
+            }
+            tableCreate += '</tr>'
+        }
+
+        table.innerHTML = tableCreate
+
+
+    </script>
+</body>
+
+</html>
