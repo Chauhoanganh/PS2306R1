@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper case</title>
+</head>
+<body>
+    <script>
+        let letters =  (prompt("Enter your text here: "))
+        console.log(letters);
+        
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz'
+        let result = [];
+        for (let i = 0; i <= letters.length; i++) {
+            if (UPPER.indexOf(letters[i]) !== -1) {
+                result.push(letters[i].toLowerCase());
+            }
+            else if (LOWER.indexOf(letters[i]) !== -1) {
+                result.push(letters[i].toUpperCase());
+            }
+            else {
+                result.push(letters[i]);
+            }
+        }
+
+        document.write(result.join(""))
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+</head>
+<body>
+    <p>Please enter the first number</p>
+    <input type="number" onchange="getnumberA(this)" name="numberA" id="numberA">
+    <p>Please enter the second number</p>
+    <input type="number" onchange="getnumberB(this)" name="numberB" id="numberB">
+    <br><br>
+    <button onclick="checkBtn()">Check!</button>
+    <p id="result"></p>
+    <script>
+        let result=document.getElementById("result")
+        function getnumberA(obj) {
+            numberA = parseInt(obj.value)
+        }
+        console.log(numberA);
+
+        function getnumberB(obj) {
+            numberB = parseInt(obj.value)
+        }
+        console.log(numberB);
+        function checkBtn() {
+            let sum=0;
+            if (numberA < numberB) {
+                for (let i=numberA; i<=numberB; i++ ) {
+                sum+=i}
+                result.innerText=sum
+            }
+            
+            if (numberA > numberB) {
+                for (let i=numberB; i<=numberA; i++) {
+                sum+=i}
+                result.innerText=sum 
+            }
+            
+     
+        }
+    </script>
+</body>
+</html>
