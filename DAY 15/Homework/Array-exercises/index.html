@@ -9,21 +9,21 @@
     
     <script>
         //Exercise 1
-        let myColor = ["Red", "Green", "White", "Black"];
+        // let myColor = ["Red", "Green", "White", "Black"];
         
-        console.log(myColor.join());
+        // console.log(myColor.join());
 
         // Exercise 2
-        // let numberArray = [0,2,5,4,6,8];
-        // let result = [numberArray[0]];
-        // for (i=1; i<=numberArray.length; i++) {
-        //     if ((numberArray[i]  %2 == 0) && (numberArray[i-1] %2 == 0)) {
-        //         result.push('-', numberArray[i]);
-        //     }
-        //     else {result.push(numberArray[i])}
-        // }
+        let numberArray = [0,2,5,4,6,8];
+        let result = [numberArray[0]];
+        for (i=1; i<=numberArray.length; i++) {
+            if ((numberArray[i]  %2 == 0) && (numberArray[i-1] %2 == 0)) {
+                result.push('-', numberArray[i]);
+            }
+            else {result.push(numberArray[i])}
+        }
 
-        // console.log(result.join(""));
+        console.log(result.join(""));
 
         
     </script>

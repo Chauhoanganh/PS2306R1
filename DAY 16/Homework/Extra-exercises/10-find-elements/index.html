@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find elements in the string</title>
+</head>
+<body>
+    <script>
+        function findCharacter(array, a) {
+            let count = 0;
+            for (let i = 0; i <= array.length; i++) {
+                if (array[i] == a) {
+                    count++
+                }
+            }
+            return count == 0? count = -1 : count;
+            
+            }
+        
+        
+
+        let array = [1, 2, 5, 0, 1, 6, 1, 9];
+        let a = 7;
+        let result = findCharacter(array, a);
+        alert(result)
+
+    </script>
+</body>
+</html>

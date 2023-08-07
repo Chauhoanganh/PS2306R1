@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number array</title>
+</head>
+<body>
+    <script>
+        let numbersArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let oddArr = [];
+        let evenArr = [];
+        let zeroArr = [];
+        let result = [];
+        for (let i = 1; i <= numbersArr.length; i++) {
+            if (numbersArr[i] % 2 ==0) {
+                evenArr.push(numbersArr[i])
+            }
+            if (numbersArr[i] == 0) {
+                zeroArr.push(0)
+            }
+
+            if (numbersArr[i] % 2 != 0) {
+                oddArr.push(numbersArr[i])
+            }
+        }
+
+        result.unshift([evenArr] + [zeroArr] + [oddArr])
+        
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name of the start</title>
+</head>
+<body>
+    
+    <script>
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        let inputName = prompt("Please enter the name of the star");
+        let temp = 0;
+    
+         
+        function findStarname() {
+            for (let i = 0; i <= array1.length; i++) {
+                if (array1[i].toLowerCase() == inputName.toLowerCase()) {
+                    temp = 1;
+                    alert (array2[i])
+                }
+                
+            }
+            if (temp !=1) {
+                alert("Sorry! We can't find it!")
+            }
+
+        } 
+        findStarname()
+        
+
+
+    </script>
+</body>
+</html>
